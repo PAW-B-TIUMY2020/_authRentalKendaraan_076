@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
 
@@ -30,7 +31,7 @@
 
 <body>
     <section id="container">
-        <!--header start-->
+  <!--header start-->
         <header class="header black-bg">
             <div class="sidebar-toggle-box">
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Klik Disini"></div>
@@ -40,8 +41,8 @@
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
-
-
+ 
+                  
             </div>
             <div class="top-menu">
                 <div class="navbar-collapse collapse">
@@ -65,9 +66,9 @@
                             <span>Menu</span>
                         </a>
                         <ul class="sub">
-                            @if (User.IsInRole("Admin"))
-                            {
-                                <li><a asp-area="" asp-controller="Role" asp-action="Index">Role</a></li>
+                                @if (User.IsInRole("Admin"))
+                    {
+                        <li><a asp-area="" asp-controller="Role" asp-action="Index">Role</a></li>
 
                                 <li><a asp-area="" asp-controller="Customer" asp-action="Index">Customer</a></li>
                                 <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
@@ -77,15 +78,15 @@
                                 <li><a asp-area="" asp-controller="KondisiKendaraan" asp-action="Index">Kondisi Kendaraan</a></li>
                                 <li><a asp-area="" asp-controller="Jaminan" asp-action="Index">Jaminan</a></li>
                                 <li><a asp-area="" asp-controller="Gender" asp-action="Index">Gender</a></li>
-
-                            }
-                            else if (User.IsInRole("Manager"))
-                            {
+ 
+                    }
+                    else if (User.IsInRole("Manager"))
+                    {
                                 <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
-                                <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>
-                            }
-                            else if (User.IsInRole("Kasir"))
-                            {
+                                <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>   
+                    }
+                    else if (User.IsInRole("Kasir"))
+                    {
                                 <li><a asp-area="" asp-controller="Customer" asp-action="Index">Customer</a></li>
                                 <li><a asp-area="" asp-controller="Peminjaman" asp-action="Index">Peminjaman</a></li>
                                 <li><a asp-area="" asp-controller="Pengembalian" asp-action="Index">Pengembalian</a></li>
@@ -93,7 +94,7 @@
                                 <li><a asp-area="" asp-controller="JenisKendaraan" asp-action="Index">Jenis Kendaraan</a></li>
                                 <li><a asp-area="" asp-controller="KondisiKendaraan" asp-action="Index">Kondisi Kendaraan</a></li>
                                 <li><a asp-area="" asp-controller="Jaminan" asp-action="Index">Jaminan</a></li>
-                            }
+                    }
                         </ul>
                     </li>
                     <li class="mt">
@@ -101,7 +102,7 @@
                             <i class="fa fa-dashboard"></i>
                             <span>Home</span>
                         </a>
-                    </li>
+                    </li>                 
                     <li class="sub-menu">
                         <a href="@Url.Action("Contact", "Home")">
                             <i class="fa fa-cogs"></i>
@@ -112,7 +113,7 @@
                         <a href="@Url.Action("About", "Home")">
                             <i class="fa fa-book"></i>
                             <span>About</span>
-                        </a>
+                        </a>                        
                     </li>
                 </ul>
                 <!-- sidebar menu end-->
@@ -128,7 +129,7 @@
                 <div class="row">
                     <div class="col-lg-9 main-chart">
                         <!--CUSTOM CHART START -->
-
+                     
                         @RenderBody()
 
                     </div>
@@ -149,7 +150,7 @@
                     &copy; Copyrights <strong>Rental Kendaraan HAW19</strong>. All Rights Reserved
                 </p>
                 <div class="credits">
-
+                
                     Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
                 </div>
                 <a href="index.html#" class="go-top">
@@ -179,3 +180,4 @@
 </body>
 
 </html>
+
